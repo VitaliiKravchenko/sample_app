@@ -4,7 +4,9 @@ ruby '2.0.0'
 
 gem 'rails', '4.0.2'
 gem 'bootstrap-sass'
-gem 'sprockets', :require => 'c:\RailsInstaller\Ruby2.0.0\lib\ruby\gems\2.0.0\gems\sprockets-rails-2.2.1\lib\sprockets\rails\version'
+#gem 'sprockets', :require => 'c:\RailsInstaller\Ruby2.0.0\lib\ruby\gems\2.0.0\gems\sprockets-rails-2.2.1\lib\sprockets\rails\version'
+#gem 'sprockets', :require => 'C:\RailsInstaller\Ruby2.0.0\lib\ruby\gems\2.0.0\gems\bootstrap-sass-3.3.6\lib\bootstrap-sass\version'
+gem 'sprockets'#, :require => 'sprockets-rails-2.2.1\lib\sprockets\rails\version'
 gem 'sass-rails'
 gem 'sass'
 
