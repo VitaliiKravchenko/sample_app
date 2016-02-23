@@ -4,7 +4,7 @@ ruby '2.0.0'
 
 gem 'rails', '4.0.2'
 gem 'bootstrap-sass'
-gem 'sprockets'
+gem 'sprockets', :require => '/app/vendor/bundle/ruby/2.0.0/gems/sprockets-rails-2.2.1/lib\sprockets/rails/version'
 gem 'sass-rails'
 gem 'sass'
 
