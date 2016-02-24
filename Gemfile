@@ -7,6 +7,7 @@ gem 'bootstrap-sass'
 gem 'sprockets', :require => './version'
 gem 'sass-rails'
 gem 'sass'
+gem 'bcrypt-ruby', '3.1.2'
 
 
 group :development, :test do
