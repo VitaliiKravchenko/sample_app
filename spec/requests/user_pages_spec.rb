@@ -32,12 +32,13 @@ describe "User pages" do
     end
 
     describe "with valid information" do
-      before do
-        fill_in "Name",         with: "Example User"
-        fill_in "Email",        with: "user@example.com"
-        fill_in "Password",     with: "foobar"
-        fill_in "Confirmation", with: "foobar"
-      end
+      before { valid_information }
+#      before do
+#        fill_in "Name",         with: "Example User"
+#        fill_in "Email",        with: "user@example.com"
+#        fill_in "Password",     with: "foobar"
+#        fill_in "Confirmation", with: "foobar"
+#      end
 
       describe "after saving the user" do
         before { click_button submit }
@@ -64,12 +65,13 @@ describe "User pages" do
     let(:submit) { "Create my account" }
     
     describe "with invalid information" do
-      before do
-        fill_in "Name",         with: "Example User"
-        fill_in "Email",        with: "example.com"
-        fill_in "Password",     with: "foobr"
-        fill_in "Confirmation", with: "foar"
-      end
+      before { invalid_information }
+#      before do
+#        fill_in "Name",         with: "Example User"
+#        fill_in "Email",        with: "example.com"
+#        fill_in "Password",     with: "foobr"
+#        fill_in "Confirmation", with: "foar"
+#      end
       
       describe "after submission" do
         before { click_button submit }
