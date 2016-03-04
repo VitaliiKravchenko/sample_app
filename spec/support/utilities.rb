@@ -16,14 +16,14 @@ def valid_information
 	fill_in "Name",         with: "Example User"
     fill_in "Email",        with: "user@example.com"
     fill_in "Password",     with: "foobar"
-    fill_in "Confirmation", with: "foobar"
+    fill_in "Confirm Password", with: "foobar"
 end
 
 def invalid_information
 	fill_in "Name",         with: "Example User"
     fill_in "Email",        with: "example.com"
     fill_in "Password",     with: "foobr"
-    fill_in "Confirmation", with: "foar"
+    fill_in "Confirm Password", with: "foar"
 end
 
 def sign_in(user, options={})
