@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
 	def show
     @user = User.find(params[:id])
+    @microposts = @user.microposts.paginate(page: params[:page])
   end
   
   def new
@@ -49,7 +50,7 @@ class UsersController < ApplicationController
       if (current_user == user) && (current_user.admin?)
         flash[:error] = "Cannot delete own admin account"
       else
-        use.destroy
+        user.destroy
         flash[:success] = "User deleted."
       end
       redirect_to users_url
