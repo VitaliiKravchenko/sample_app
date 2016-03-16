@@ -42,4 +42,28 @@ describe "Micropost pages" do
       end
     end
   end
+
+
+  describe "micropost pagination" do
+
+    before   {31.times { FactoryGirl.create(:micropost, user: user, content: "Lorem Ipsum") }}
+    before { sign_in user }
+    before {visit user_path(user)}
+
+
+    it { should have_selector('div.pagination') }
+  
+  end
+
+  describe "delete microposts of another user" do
+        let(:admin) { FactoryGirl.create(:admin) }
+        before   { FactoryGirl.create(:micropost, user: user, content: "Lorem Ipsum") }
+        before do
+          sign_in admin
+          visit user_path(user)
+        end
+        
+        it { should_not have_link('delete') }
+  end
+
 end
